@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Imagenet prediction with RESNET152!</title>
+</head>
+<h1 style="color:white"> Image classification with RESNET152!</h1>
+<h2 style="color:white"> File Uploader</h2>
+<h3 style="color:white"> Upload your image here for classification</h3>
+
+<style>
+body{
+  background-color: black
+}
+</style>
+<body>
+
+<form style="color:white" id="upload-form" action="{{url_for('get_prediction')}}" method="POST" enctype="multipart/form-data">
+  <input type="file" name="file" accept="static/" multiple>
+  <input type="submit" value="send">
+</form>
+</body>
+</html>
