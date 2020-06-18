@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <title>Image Viewer</title>
+</head>
+
+<style>
+body{
+  background-color: black
+}
+figcaption{
+  color:white
+}
+</style>
+
+<body>
+  <form style="color:white" id="upload-form" action="http://localhost:5001/">
+    <input type="submit" value="Go Back">
+  </form>
+
+  <h1 style="color:white"> {{num}} images uploaded succesfully! </h1>
+  <h2 style="color:white"> The images are displayed below</h2>
+  {% for i in range(num) %}:
+    <figure>
+      <img src="{{url_for('static',filename=img_list[i])}}" width=300 height=300>
+      <figcaption> Image {{i+1}} </figcaption>
+    </figure>
+  {% endfor %}
+
+</body>
