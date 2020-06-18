@@ -53,7 +53,7 @@ class view_image(Resource):
         # return send_from_directory("static",filename,as_attachment=True) this will save the images that are upload to our computer in static folder as file name
         return make_response(render_template("view.html",img_list=filenames,num=num_images))
 
-"""
+
 class image_link(Resource):
     def post(self):
         if request.files:
@@ -70,7 +70,7 @@ class image_link(Resource):
 
         #plt.imshow(img_raw)
             return make_response(render_template("image_link.html",img_url=url,label=message))
-"""
+
 
 
 class get_prediction_image(Resource):
