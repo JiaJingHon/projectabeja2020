@@ -4,9 +4,14 @@
   <meta charset="UTF-8">
   <title>Imagenet prediction with RESNET152!</title>
 </head>
-<h1 style="color:white"> Image classification with RESNET152!</h1>
+<h1 style="color:white"> Hello! Welcome to Image classification with RESNET152!</h1>
+<img src="https://miro.medium.com/max/1009/1*7kCZemEOdR_5K32Z7mtDCg.jpeg">
+<br>
+<a href="https://pytorch.org/docs/stable/torchvision/models.html" title="pre-trained models in pytorch"> Click here for more information on Resnet152! </a>
+<h2 style="color:white"> To start, please upload your choice of images below</h2>
 <h2 style="color:white"> File Uploader</h2>
-<h3 style="color:white"> Upload your image here for classification</h3>
+<h3 style="color:white"> Upload Image here for classification</h3>
+
 
 <style>
 body{
@@ -15,9 +20,27 @@ body{
 </style>
 <body>
 
-<form style="color:white" id="upload-form" action="{{url_for('get_prediction')}}" method="POST" enctype="multipart/form-data">
+<form style="color:white" id="upload-form" action="{{url_for('get_prediction_image')}}" method="POST" enctype="multipart/form-data">
   <input type="file" name="file" accept="static/" multiple>
   <input type="submit" value="send">
 </form>
+
+<h3 style="color:white">Upload Image here for viewing</h3>
+<form style="color:white" id="upload-form" action="{{url_for('view_image')}}" method="POST" enctype="multipart/form-data">
+  <input type="file" name="file" accept="static/" multiple>
+  <input type="submit" value="send">
+</form>
+
+<!---
+<br>
+<br>
+If do not have images available, you can also upload a link to an image here
+<h3 style="color:white">Upload Link here for Classification</h3>
+<form style="color:white" id="upload-form" action="{{url_for('image_link')}}" method="POST" enctype="multipart/form-data">
+  <input type="url" name="url" >
+  <input type="submit" value="send">
+</form>
+-->
+
 </body>
 </html>
