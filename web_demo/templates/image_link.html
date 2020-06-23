@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+  body{
+    background-color: black
+
+  }
+
+  figcaption{
+    color:white;
+    font-style:italic;
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+<h1 style="color:white"> Classification result: </h1>
+  <form style="color:white" id="upload-form" action="http://localhost:5001/">
+    <input type="submit" value="Go Back">
+  </form>
+
+  <figure>
+    <img src="{{url_for('static',filename=img)}}" width=300 height=300 style="text-align:center">
+    <figcaption> {{label}} </figcaption>
+  </figure>
+</body>
+</head>

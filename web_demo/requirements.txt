@@ -1,0 +1,7 @@
+torchvision
+torch
+numpy
+Pillow
+flask_restful
+flask
+matplotlib

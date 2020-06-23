@@ -1,0 +1,6 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "5001:5000" #binds the container and the host machine to the exposed port 5000
